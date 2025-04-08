@@ -1,0 +1,297 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Cabecera */
+.header {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #f44336;
+}
+
+.header .cta .btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header .cta .btn:hover {
+    background-color: #d32f2f;
+}
+/* portada */
+.portadaPlanes {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.contenidoPortada h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contenidoPortada p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contenedor principal */
+.contenedorPlanes {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.tituloPrincipal {
+    text-align: center;
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Lista de planes */
+.listaPlanes {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* cards de planes */
+.planCard {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    
+}
+.imagenPlan{
+    height: 10rem;
+}
+
+.planCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen  plan */
+.imagenPlan {
+    height: 180px;
+    overflow: hidden;
+}
+
+.imagenPlan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.planCard:hover .imagenPlan img {
+    transform: scale(1.05);
+}
+
+/* Cabecera del plan */
+.cabeceraPlan {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.cabeceraPlan.basico {
+    background: #4a6fa5;
+}
+
+.cabeceraPlan.estandar {
+    background: #f44336;
+}
+
+.cabeceraPlan.premium {
+    background: #ff9800;
+}
+
+.cabeceraPlan.parejas {
+    background: #9c27b0;
+}
+
+.cabeceraPlan h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.precioPlan {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.precioPlan span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.notaPrecio {
+    font-size: 0.9rem;
+    margin: 5px 0 0;
+    font-style: italic;
+}
+
+/* Detalles del plan */
+.detallesPlan {
+    padding: 20px;
+}
+
+.beneficiosPlan {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.beneficiosPlan li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.beneficiosPlan i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.beneficiosPlan .fa-check {
+    color: #4CAF50;
+}
+
+.beneficiosPlan .fa-times {
+    color: #f44336;
+}
+
+/* Botón del plan */
+.botonPlan {
+    display: block;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.botonPlan:hover {
+    background: #f44336;
+}
+
+/* Plan destacado */
+.destacado {
+    transform: scale(1.05);
+    
+}
+
+.etiquetaDestacado {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #FFC107;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 2;
+}
+
+/* Información adicional */
+.infoExtra {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.enlaceAyuda {
+    color: #f44336;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlaceAyuda:hover {
+    text-decoration: underline;
+}
+
+.garantia {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.garantia i {
+    margin-right: 5px;
+}
+
