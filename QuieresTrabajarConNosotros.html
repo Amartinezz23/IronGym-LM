@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a nuestro equipo | IronGym</title>
+    <link rel="stylesheet" href="CSS/formulario.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1>IronGym</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Horarios.html">Horarios</a></li>
+                <li><a href="Peronal.html">Personal</a></li>
+                <li><a href="Planes.html">Planes</a></li>
+
+            </ul>
+        </nav>
+        <div class="cta">
+            <a href="Planes.html" class="btn">Únete Ahora</a>
+        </div>
+    </header>
+
+    <div class="contenedor-formulario">
+        <div class="cabecera-formulario">
+            <h1><i class="fas fa-handshake"></i> ¿Quieres trabajar con nosotros?</h1>
+            <p>Envíanos tu información y nos pondremos en contacto contigo</p>
+        </div>
+
+        <form id="formulario-trabajo" class="formulario" action="#" method="POST">
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre completo*</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+            </div>
+
+            <div class="grupo-formulario-doble">
+                <div class="grupo-formulario">
+                    <label for="puesto">Puesto de interés*</label>
+                    <select id="puesto" name="puesto" required>
+                        <option value="" disabled selected>Selecciona un puesto</option>
+                        <option value="desarrollador">Monitor Sala De Baile</option>
+                        <option value="disenador">Monitor PowerLifting</option>
+                        <option value="marketing">Monitor Recepción</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="experiencia">Años de experiencia*</label>
+                    <input type="number" id="experiencia" name="experiencia" min="0" max="50" required placeholder="3">
+                </div>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="mensaje">Cuéntanos sobre ti*</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="Tu experiencia, habilidades y por qué quieres unirte a nuestro equipo..."></textarea>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="cv">Adjunta tu CV (PDF, máximo 5MB)*</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <div class="grupo-formulario acepto-terminos">
+                <input type="checkbox" id="privacidad" name="privacidad" required>
+                <label for="privacidad">Acepto la política de privacidad y el tratamiento de mis datos*</label>
+            </div>
+
+            <button type="submit" class="boton-enviar">
+                <i class="fas fa-paper-plane"></i> Enviar solicitud
+            </button>
+        </form>
+    </div>
+     
+     <div class="pie-inferior">
+        <p class="copyright">2025 IronGym. Todos los derechos reservados.</p>
+        <div class="enlaces-legales">
+            <a href="#" class="enlace-legal">Política de Privacidad</a>
+            <a href="#" class="enlace-legal">Términos y Condiciones</a>
+        </div>
+    </div>
+    
+</body>
+</html>

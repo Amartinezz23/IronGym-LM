@@ -1,0 +1,300 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color:  #333;
+    background-color:  #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+#iron{
+    padding-left: 10px;
+}
+#boton{
+    padding-right: 25px;
+}
+
+.contenedor-equipo {
+    width: 100%;
+    
+}
+
+.cabecera-equipo {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 10rem;
+}
+
+.cabecera-equipo h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cabecera-equipo h1 i {
+    color: #e74c3c;
+    margin-right: 15px;
+}
+
+.cabecera-equipo p {
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Estilos video */
+.video-presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.marco-video {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.marco-video video {
+    width: 100%;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+
+.marco-video:hover .efecto-play {
+    opacity: 1;
+}
+
+.texto-video {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.texto-video h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Filtros de equipo */
+.filtros-equipo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filtro {
+    padding: 8px 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.filtro:hover, .filtro.activo {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+/* personal fotos*/
+.grid-equipo {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.tarjeta-personal {
+    background: white;
+    border-radius: 8px;
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tarjeta-personal:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-personal {
+    position: relative;
+    height: 450px;
+    
+}
+
+.imagen-personal img {
+    width: 100%;
+    height: 100%;
+    
+    transition: all 0.3s ease;
+}
+
+.tarjeta-personal:hover .imagen-personal img {
+    transform: scale(1.05);
+}
+
+.redes-personal {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(44, 62, 80, 0.8);
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-personal:hover .redes-personal {
+    bottom: 0;
+}
+
+.redes-personal a {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.redes-personal a:hover {
+    background: #e74c3c;
+    transform: translateY(-3px);
+}
+
+.info-personal {
+    padding: 20px;
+    text-align: center;
+}
+
+.info-personal h3 {
+    margin: 0 0 5px 0;
+    color:#2c3e50;
+}
+
+.cargo {
+    color: #e74c3c;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+}
+
+.descripcion {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* info final */
+.cta-equipo {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-equipo h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.boton-equipo {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.boton-equipo:hover {
+    background: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.boton-equipo i {
+    margin-right: 8px;
+}
+
+/* Cabecera */
+.header {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #f44336;
+}
+
+.header .cta .btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header .cta .btn:hover {
+    background-color: #d32f2f;
+}

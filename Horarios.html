@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronGym - Horarios</title>
+    <link rel="stylesheet" href="CSS/cssHorarios.css">
+    
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header class="header">
+        <div class="logo">
+            <h1>IronGym</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Horarios.html" class="active">Horarios</a></li>
+                <li><a href="Peronal.html">Personal</a></li>
+                <li><a href="Planes.html">Planes</a></li>
+            </ul>
+        </nav>
+        <div class="cta">
+            <a href="Planes.html" class="btn">Únete Ahora</a>
+        </div>
+    </header>
+
+    
+    <section class="heroe horarios">
+        <div class="heroe-content">
+            <h2>Nuestros Horarios</h2>
+            <p>Planifica tu entrenamiento según tu disponibilidad. Tenemos horarios flexibles para adaptarnos a tu rutina.</p>
+        </div>
+    </section>
+
+    
+    <section class="contenedor">
+        <h2 class="titulo">Horario Semanal</h2>
+        <p class="subtitulo">Consulta nuestras horas de apertura y clases especiales</p>
+        
+        <div class="pestanas">
+            <button class="boton activo" data-tab="general">Horario General</button>
+        </div>
+        
+        <div class="contenido activo" id="general">
+            <div class="tabla-contenedor">
+                <table class="tabla-horarios">
+                    <thead>
+                        <tr>
+                            <th>Día</th>
+                            <th>Apertura</th>
+                            <th>Cierre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunes</td>
+                            <td>6:00 AM</td>
+                            <td>10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Martes</td>
+                            <td>6:00 AM</td>
+                            <td>10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Miércoles</td>
+                            <td>6:00 AM</td>
+                            <td>10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Jueves</td>
+                            <td>6:00 AM</td>
+                            <td>10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Viernes</td>
+                            <td>6:00 AM</td>
+                            <td>9:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>8:00 AM</td>
+                            <td>8:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>9:00 AM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="contenido" id="clases">
+            <div class="tabla-contenedor">
+                <table class="tabla-horarios">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Lunes</th>
+                            <th>Miércoles</th>
+                            <th>Viernes</th>
+                            <th>Sábado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Spinning</td>
+                            <td>7:00 AM - 8:00 AM</td>
+                            <td>7:00 AM - 8:00 AM</td>
+                            <td>7:00 AM - 8:00 AM</td>
+                            <td>9:00 AM - 10:00 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Crossfit</td>
+                            <td>6:00 PM - 7:00 PM</td>
+                            <td>6:00 PM - 7:00 PM</td>
+                            <td>6:00 PM - 7:00 PM</td>
+                            <td>11:00 AM - 12:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Yoga</td>
+                            <td>9:00 AM - 10:00 AM</td>
+                            <td>9:00 AM - 10:00 AM</td>
+                            <td>-</td>
+                            <td>10:00 AM - 11:00 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Boxeo</td>
+                            <td>8:00 PM - 9:00 PM</td>
+                            <td>8:00 PM - 9:00 PM</td>
+                            <td>7:00 PM - 8:00 PM</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            
+            <div class="bloque-logo">
+                <img src="MEDIA/logo.png" alt="IronGym Logo" class="logo-pie">
+                <p class="texto-pie">Transformando cuerpos, cambiando vidas desde 2025.</p>
+                
+            </div>
+
+            
+            <div class="bloque-enlaces">
+                <h3 class="titulo-seccion">Enlaces Rápidos</h3>
+                <ul class="lista-enlaces">
+                    <li><a href="index.html" class="enlace-pie">Inicio</a></li>
+                    <li><a href="Horarios.html" class="enlace-pie">Horarios</a></li>
+                    <li><a href="Peronal.html" class="enlace-pie">Personal</a></li>
+                    <li><a href="Planes.html" class="enlace-pie">Planes</a></li>
+                    <li><a href="QuieresTrabajarConNosotros.html" class="enlace-pie">¿Quieres trabajar con nosotros?</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="bloque-contacto">
+                <h3 class="titulo-seccion">Contacto</h3>
+                <ul class="lista-contacto">
+                    <li> Calle Virgen Blanca, Ciudad Jaén</li>
+                    <li>953 22 54 14</li>
+                    <li> IronGymInfo@gmail.com</li>
+                </ul>
+            </div>
+
+            
+            <div class="bloque-info">
+                <h3 class="titulo-seccion">¿Quieres más información?</h3>
+                <p class="texto-pie">Recibe ofertas y noticias en tu correo</p>
+                <form class="formulario-suscripcion">
+                    <input type="email" placeholder="Tu correo" class="input-email">
+                    <button type="submit" class="boton-suscribir">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+
+        
+        <div class="pie-inferior">
+            <p class="copyright">2025 IronGym. Todos los derechos reservados.</p>
+            <p class="copyright">Antonio Martínez Colmenero</p>
+            <div class="enlaces-legales">
+                <a href="#" class="enlace-legal">Política de Privacidad</a>
+                <a href="#" class="enlace-legal">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

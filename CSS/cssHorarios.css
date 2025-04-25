@@ -1,0 +1,627 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Cabecera */
+.header {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #f44336;
+}
+
+.header .cta .btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header .cta .btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos generales - Heredados de la página principal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Cabecera - Heredada de la página principal */
+.header {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #f44336;
+}
+
+.header nav ul li a.active {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.header .cta .btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header .cta .btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Heroe - Adaptado para horarios */
+.heroe.horarios {
+    background: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.heroe.horarios::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.heroe.horarios .heroe-content {
+    position: relative;
+    z-index: 1;
+}
+
+.heroe.horarios h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.heroe.horarios p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eee;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.titulo::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #f44336;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Pestañas */
+.pestanas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.boton {
+    background: none;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #666;
+    position: relative;
+    transition: all 0.3s;
+    margin: 0 5px;
+}
+
+.boton:hover {
+    color: #f44336;
+}
+
+.boton.activo {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.boton.activo::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f44336;
+}
+
+/* Contenido de pestañas */
+.contenido {
+    display: none;
+}
+
+.contenido.activo {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+
+
+/* Tabla de horarios */
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.tabla-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-horarios th, 
+.tabla-horarios td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.tabla-horarios th {
+    background-color: #f44336;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.tabla-horarios tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-horarios tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Pie de página - Heredado de la página principal */
+.pie-pagina {
+    background: #111;
+    color: #fff;
+    padding: 50px 20px 20px;
+    font-family: 'Arial', sans-serif;
+    margin-top: 50px;
+}
+
+.contenedor-pie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* Bloques principales */
+.bloque-logo,
+.bloque-enlaces,
+.bloque-contacto,
+.bloque-info {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+/* Logo */
+.logo-pie {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.texto-pie {
+    color: #aaa;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icono-red {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.icono-red:hover {
+    color: #f44336;
+}
+
+/* Títulos de sección */
+.titulo-seccion {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: #f44336;
+}
+
+/* Listas */
+.lista-enlaces,
+.lista-contacto {
+    list-style: none;
+}
+
+.lista-enlaces li {
+    margin-bottom: 10px;
+}
+
+.enlace-pie {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.enlace-pie:hover {
+    color: #f44336;
+}
+
+/* Contacto */
+.lista-contacto li {
+    margin-bottom: 12px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icono-contacto {
+    margin-right: 10px;
+    color: #f44336;
+    width: 20px;
+}
+
+/* Info */
+.formulario-suscripcion {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-email {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+}
+
+.boton-suscribir {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-suscribir:hover {
+    background: #d32f2f;
+}
+
+/* Pie de página */
+.pie-pagina {
+    background: #111;
+    color: #fff;
+    padding: 50px 20px 20px;
+    font-family: 'Arial', sans-serif;
+    margin-top: 50px;
+}
+
+.contenedor-pie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* Bloques principales */
+.bloque-logo,
+.bloque-enlaces,
+.bloque-contacto,
+.bloque-info {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+/* Logo */
+.logo-pie {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.texto-pie {
+    color: #aaa;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icono-red {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.icono-red:hover {
+    color: #f44336;
+}
+
+/* Títulos de sección */
+.titulo-seccion {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: #f44336;
+}
+
+/* Listas */
+.lista-enlaces,
+.lista-contacto {
+    list-style: none;
+}
+
+.lista-enlaces li {
+    margin-bottom: 10px;
+}
+
+.enlace-pie {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.enlace-pie:hover {
+    color: #f44336;
+}
+
+/* Contacto */
+.lista-contacto li {
+    margin-bottom: 12px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+}
+
+.icono-contacto {
+    margin-right: -19px;
+    color: #f44336;
+    width: 20px;
+}
+
+/* Info */
+.formulario-suscripcion {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-email {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+}
+
+.boton-suscribir {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-suscribir:hover {
+    background: #d32f2f;
+}
+
+/* Pie inferior */
+.pie-inferior {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.enlaces-legales {
+    display: flex;
+    gap: 15px;
+}
+
+.enlace-legal {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.enlace-legal:hover {
+    color: #f44336;
+}
+

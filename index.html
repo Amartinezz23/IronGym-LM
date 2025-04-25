@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronGym - Portada</title>
+    <link rel="stylesheet" href="CSS/cssPaginaPrincipal.css">
+    
+</head>
+<body>
+
+    
+    <header class="header">
+        <div class="logo">
+            <h1>IronGym</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Horarios.html">Horarios</a></li>
+                <li><a href="Peronal.html">Personal</a></li>
+                <li><a href="Planes.html">Planes</a></li>
+
+            </ul>
+        </nav>
+        <div class="cta">
+            <a href="Planes.html" class="btn">Únete Ahora</a>
+        </div>
+    </header>
+
+
+    
+    <section class="heroe">
+    <div class="heroe-content">
+        <h2>Transforma tu cuerpo, transforma tu vida</h2>
+        <p>Entrenamientos personalizados, equipos de vanguardia, y el apoyo que necesitas para alcanzar tus objetivos.</p>
+        <a href="Planes.html" class="btn">Toda la información aquí</a>
+    </div>
+    </section>
+
+
+    
+    <section class="zonas">
+        <h2>Explora Nuestras Zonas</h2>
+        <p>Descubre nuestras zonas especializadas para cada tipo de entrenamiento: Cardio, Powerlifting, Alta Intensidad y Zona de Bicicletas. Elige la que más se ajuste a tus objetivos.</p>
+    </section>
+
+    <div class="carousel">
+        <button id="retroceder" class="carrusel-btn prev">&#10094;</button>
+        <div id="imagen"></div>
+            <button id="avanzar" class="carrusel-btn next">&#10095;</button>
+        </div>
+        <div class="controles">
+            <button id="play" class="control-btn">Play</button>
+            <button id="stop" class="control-btn" disabled>Stop</button>
+    </div>
+    
+    
+    <footer class="pie-pagina">
+    <div class="contenedor-pie">
+        
+        <div class="bloque-logo">
+            <img src="MEDIA/logo.png" alt="IronGym Logo" class="logo-pie">
+            <p class="texto-pie">Transformando cuerpos, cambiando vidas desde 2025.</p>
+            
+        </div>
+
+        
+        <div class="bloque-enlaces">
+            <h3 class="titulo-seccion">Enlaces Rápidos</h3>
+            <ul class="lista-enlaces">
+                <li><a href="index.html" class="enlace-pie">Inicio</a></li>
+                <li><a href="Horarios.html" class="enlace-pie">Horarios</a></li>
+                <li><a href="Peronal.html" class="enlace-pie">Personal</a></li>
+                <li><a href="Planes.html" class="enlace-pie">Planes</a></li>
+                <li><a href="QuieresTrabajarConNosotros.html" class="enlace-pie">¿Quieres trabajar con nosotros?</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="bloque-contacto">
+            <h3 class="titulo-seccion">Contacto</h3>
+            <ul class="lista-contacto">
+                <li> Calle Virgen Blanca, Ciudad Jaén</li>
+                <li>Nº de telefono: 953 22 54 14</li>
+                <li> IronGymInfo@gmail.com</li>
+            </ul>
+        </div>
+
+        
+        <div class="bloque-info">
+            <h3 class="titulo-seccion">¿Quieres más información?</h3>
+            <p class="texto-pie">Recibe ofertas y noticias en tu correo</p>
+            <form class="formulario-suscripcion">
+                <input type="email" placeholder="Tu correo" class="input-email">
+                <button type="submit" class="boton-suscribir">Suscribirse</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="pie-inferior">
+        <p class="copyright">2025 IronGym. Todos los derechos reservados.</p>
+        <p class="copyright">Antonio Martínez Colmenero</p>
+        <div class="enlaces-legales">
+            <a href="#" class="enlace-legal">Política de Privacidad</a>
+            <a href="#" class="enlace-legal">Términos y Condiciones</a>
+        </div>
+    </div>
+    </footer>
+
+    <!-- Script para carrusel de fotos -->
+    <script>
+      window.onload = function () {
+          
+          const IMAGENES = [
+              'MEDIA/AltaIntensidad.jpg',
+              'MEDIA/PowerLfting.jpg',
+              'MEDIA/ZonaBicicleta.jpg',
+              'MEDIA/ZonaCardio.PNG'
+          ];
+          const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
+          let posicionActual = 0;
+          let $botonRetroceder = document.querySelector('#retroceder');
+          let $botonAvanzar = document.querySelector('#avanzar');
+          let $imagen = document.querySelector('#imagen');
+          let $botonPlay = document.querySelector('#play');
+          let $botonStop = document.querySelector('#stop');
+          let intervalo;
+
+         
+          function pasarFoto() {
+              if(posicionActual >= IMAGENES.length - 1) {
+                  posicionActual = 0;
+              } else {
+                  posicionActual++;
+              }
+              renderizarImagen();
+          }
+
+          
+          function retrocederFoto() {
+              if(posicionActual <= 0) {
+                  posicionActual = IMAGENES.length - 1;
+              } else {
+                  posicionActual--;
+              }
+              renderizarImagen();
+          }
+
+          /**
+           * Funcion que actualiza la imagen de imagen dependiendo de posicionActual
+           */
+          function renderizarImagen () {
+              $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
+          }
+
+          /**
+           * Activa el autoplay de la imagen
+           */
+          function playIntervalo() {
+              intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
+              // Desactivamos los botones de control
+              $botonAvanzar.setAttribute('disabled', true);
+              $botonRetroceder.setAttribute('disabled', true);
+              $botonPlay.setAttribute('disabled', true);
+              $botonStop.removeAttribute('disabled');
+
+          }
+
+          /**
+           * Para el autoplay de la imagen
+           */
+          function stopIntervalo() {
+              clearInterval(intervalo);
+              // Activamos los botones de control
+              $botonAvanzar.removeAttribute('disabled');
+              $botonRetroceder.removeAttribute('disabled');
+              $botonPlay.removeAttribute('disabled');
+              $botonStop.setAttribute('disabled', true);
+          }
+
+          // Eventos
+          $botonAvanzar.addEventListener('click', pasarFoto);
+          $botonRetroceder.addEventListener('click', retrocederFoto);
+          $botonPlay.addEventListener('click', playIntervalo);
+          $botonStop.addEventListener('click', stopIntervalo);
+          // Iniciar
+          renderizarImagen();
+      }
+  </script>
+
+</body>
+</html>
